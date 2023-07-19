@@ -1,0 +1,18 @@
+<h1 style="margin-left: auto; margin-right: auto; text-align: center; align-items: center; align-content: center;">Resultados de la búsqueda:</h1>
+<div class="col animated fadeIn fast" *ngFor="let heroe of heroes; let i=index">
+    <div class="animated fadeIn fast card mb-3" style="margin-left: auto; margin-right: auto; text-align: center; align-items: center; align-content: center;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img [src]="heroe.img" class="img-fluid rounded-start" [alt]="heroe.origen">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body" style="margin-top: 5%;">
+                    <h5 class="card-title" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 200%;">{{heroe.origen}}</h5>
+                    <p class="card-text">{{heroe.destino}}</p>
+                    <p class="card-text"><small class="text-body-secondary">{{heroe.descripcion}}</small></p>
+                    <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Saber más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
